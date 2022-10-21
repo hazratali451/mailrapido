@@ -1,4 +1,5 @@
 import React from "react";
+import AddOns from "./components/AddOns";
 import Feature from "./components/Feature";
 import WorkProcess from "./components/WorkProcess";
 
@@ -7,6 +8,7 @@ const Home = () => {
 		<>
 			<WorkProcess />
 			<Feature />
+			<AddOns />
 		</>
 	);
 };

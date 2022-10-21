@@ -31,6 +31,14 @@
 		@media (max-width: 1199px) {
 			@content;
 		}
+	} @else if $point==xxl {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	} @else if $point==max-xxl {
+		@media (max-width: 1399px) {
+			@content;
+		}
 	}
 }
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap");
@@ -566,5 +574,33 @@ header {
 	opacity: 0.7;
 	@include breakpoint(max-md) {
 		opacity: 0.5;
+	}
+}
+/*Temp Email*/
+.temp-email-title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 62px;
+	max-width: 470px;
+	@include breakpoint(max-xl) {
+		font-size: 36px;
+		line-height: 1.4;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 26px;
+	}
+}
+.temp-email-img {
+	max-width: 826px;
+	margin-bottom: -40px;
+	@include breakpoint(max-xxl) {
+		max-width: 720px;
+	}
+	@include breakpoint(max-xl) {
+		width: 100%;
+	}
+	@include breakpoint(max-sm) {
+		width: 100%;
+		margin-bottom: -10px;
 	}
 }
