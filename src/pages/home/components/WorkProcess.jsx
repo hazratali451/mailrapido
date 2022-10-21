@@ -5,6 +5,7 @@ const WorkProcess = () => {
 	return (
 		<>
 			<section className="process-section pt-120 pb-120">
+				<div className="process-shape"></div>
 				<div className="container">
 					<SectionHeader
 						subtitle="Work process"
