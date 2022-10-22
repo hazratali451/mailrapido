@@ -1,5 +1,34 @@
 import React from "react";
-import temp_email from "../../../assets/images/temp-email-img.png";
+import { Link } from "react-router-dom";
+import img1 from "../../../assets/images/temp-email/1.png";
+import img2 from "../../../assets/images/temp-email/2.png";
+import img3 from "../../../assets/images/temp-email/3.png";
+import img4 from "../../../assets/images/temp-email/4.png";
+import img5 from "../../../assets/images/temp-email/5.png";
+
+const data = [
+	{
+		img: img1,
+		link: "#",
+	},
+	{
+		img: img2,
+		link: "#",
+	},
+	{
+		img: img3,
+		link: "#",
+	},
+	{
+		img: img4,
+		link: "#",
+	},
+	{
+		img: img5,
+		link: "#",
+	},
+];
+
 const AddOns = () => {
 	return (
 		<>
@@ -12,7 +41,14 @@ const AddOns = () => {
 							</h2>
 						</div>
 						<div className="col-lg-7">
-							<img src={temp_email} className="temp-email-img" alt="" />
+							<div className="temp-email-imgaes">
+								{data &&
+									data.map(({ img, link }, i) => (
+										<Link to={link} key={i}>
+											<img src={img} alt="" />
+										</Link>
+									))}
+							</div>
 						</div>
 					</div>
 				</div>
