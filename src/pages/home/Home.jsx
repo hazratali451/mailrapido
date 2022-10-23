@@ -2,6 +2,7 @@ import React from "react";
 import AddOns from "./components/AddOns";
 import Banner from "./components/Banner";
 import CustomerSay from "./components/CustomerSay";
+import Faq from "./components/Faq";
 import Feature from "./components/Feature";
 import GetApp from "./components/GetApp";
 import PricingSection from "./components/PricingSection";
@@ -17,6 +18,7 @@ const Home = () => {
 			<GetApp />
 			<CustomerSay />
 			<PricingSection />
+			<Faq />
 		</>
 	);
 };
