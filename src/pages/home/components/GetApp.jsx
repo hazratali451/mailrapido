@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import google from "../../../assets/images/apps/1.png";
-import apple from "../../../assets/images/apps/2.png";
+import google from "../../../assets/images/apps/1.svg";
+import apple from "../../../assets/images/apps/2.svg";
 import mobile from "../../../assets/images/apps/mobile-app.png";
 
 const GetApp = () => {
