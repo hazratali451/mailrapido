@@ -383,6 +383,9 @@ header {
 	}
 	&.center-align {
 		max-width: 720px;
+		@include breakpoint(max-xl) {
+			max-width: 600px;
+		}
 	}
 }
 //Work Process
@@ -876,4 +879,237 @@ header {
 	@include breakpoint(max-sm) {
 		margin-top: 25px;
 	}
+}
+/*Get App Section*/
+.get-app {
+	padding: 88px 0 116px;
+	background: #f4cfde;
+	overflow: hidden;
+	position: relative;
+	@include breakpoint(max-lg) {
+		padding-bottom: 0;
+		padding-top: 70px;
+	}
+}
+.get-app-wrapper {
+	.content {
+		max-width: 412px;
+		.btns-grp {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 25px;
+			img {
+				max-width: 100%;
+			}
+		}
+		.title {
+			font-size: 48px;
+			text-transform: capitalize;
+			margin-bottom: 24px;
+		}
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+		.text {
+			margin-bottom: 64px;
+		}
+	}
+	.mobile-app {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% + 10px);
+	}
+	@include breakpoint(max-xl) {
+		.content {
+			.text {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	@include breakpoint(max-lg) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.content {
+			margin: 0 auto;
+			text-align: center;
+			.text {
+				margin-bottom: 40px;
+			}
+		}
+		.mobile-app {
+			position: relative;
+			left: unset;
+			bottom: unset;
+			margin-top: 50px;
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+	@include breakpoint(max-md) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.content {
+			margin: 0 auto;
+			text-align: center;
+			.title {
+				font-size: 36px;
+				margin-bottom: 10px;
+			}
+			.text {
+				margin-bottom: 30px;
+			}
+			.btns-grp {
+				justify-content: center;
+				a {
+					display: block;
+					height: 30px;
+					img {
+						height: 40px;
+					}
+				}
+			}
+		}
+		.mobile-app {
+			position: relative;
+			left: unset;
+			bottom: unset;
+			margin-top: 50px;
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+}
+/*Customer Section*/
+.customer-section {
+	padding: 112px 0 109px;
+	overflow: hidden;
+	@include breakpoint(max-md) {
+		padding: 70px 0;
+	}
+}
+.customer-slider {
+	max-width: 608px;
+	margin: 0 auto;
+	.swiper {
+		overflow: visible;
+	}
+	@include breakpoint(md) {
+		padding-bottom: 80px;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: 20px;
+		color: #767779;
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		transition: all ease 0.3s;
+		&::after {
+			font-size: 20px;
+			font-weight: 800;
+		}
+		&:hover {
+			background: #f2f6ff;
+		}
+	}
+	.swiper-button-prev {
+		left: -100px;
+	}
+	.swiper-button-next {
+		right: -100px;
+	}
+	@include breakpoint(max-xl) {
+		max-width: 500px;
+	}
+	@include breakpoint(max-lg) {
+		max-width: 420px;
+	}
+	@include breakpoint(max-md) {
+		.swiper-button-prev {
+			left: -70px;
+		}
+		.swiper-button-next {
+			right: -70px;
+		}
+	}
+}
+.__client-item {
+	text-align: center;
+	blockquote {
+		border-radius: 20px;
+		padding: 40px 50px 76px;
+		background: #f2f6ff;
+		font-size: 18px;
+		font-weight: 600;
+		font-style: italic;
+		transition: all ease 0.5s;
+	}
+	.avatar {
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		object-fit: cover;
+		margin-top: -48px;
+		margin-bottom: 16px;
+		border: 2px solid transparent;
+	}
+	.name {
+		text-transform: capitalize;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.designation {
+		color: #626566;
+	}
+	transition: all ease 500ms;
+	@include breakpoint(max-lg) {
+		blockquote {
+			font-size: 16px;
+			font-weight: 400;
+			padding: 40px 25px 60px;
+		}
+	}
+}
+.swiper-slide-next,
+.swiper-slide-prev {
+	.__client-item {
+		@include breakpoint(md) {
+			transform: translateY(80px);
+		}
+	}
+}
+.swiper-slide-active {
+	.__client-item {
+		blockquote {
+			color: var(--white);
+			background: var(--primary);
+		}
+		.avatar {
+			border-color: #fff;
+		}
+	}
+}
+.pricing-section-header {
+	.title {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 580px;
+	}
+}
+.customer-shape {
+	background: #4e6aff;
+	filter: blur(337.5px);
+	border-radius: 35px;
+	width: 434.84px;
+	height: 434.84px;
+	right: 0;
+	position: absolute;
+	opacity: 0.6;
 }
