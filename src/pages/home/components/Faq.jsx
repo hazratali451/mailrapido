@@ -2,6 +2,9 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import SectionHeader from "../../../components/SectionHeader";
+
+import { Link } from "react-router-dom";
+import avatar from "../../../assets/images/faq-avatar.png";
 const data = [
 	{
 		title: `How are we sourcing talents? -`,
@@ -56,6 +59,17 @@ const Faq = () => {
 								</Accordion.Item>
 							))}
 					</Accordion>
+				</div>
+				<div className="__still-faq text-center">
+					<img src={avatar} alt="" />
+					<h5>Still have questions?</h5>
+					<div>
+						Can’t find the answer you’re looking for? Please chat to our
+						friendly team.
+					</div>
+					<Link to="#" className="btn--base">
+						<span>Get in touch</span>
+					</Link>
 				</div>
 			</div>
 		</section>
