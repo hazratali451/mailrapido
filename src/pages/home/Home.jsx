@@ -1,6 +1,7 @@
 import React from "react";
 import AddOns from "./components/AddOns";
 import Banner from "./components/Banner";
+import BlogSection from "./components/BlogSection";
 import CustomerSay from "./components/CustomerSay";
 import Faq from "./components/Faq";
 import Feature from "./components/Feature";
@@ -19,6 +20,7 @@ const Home = () => {
 			<CustomerSay />
 			<PricingSection />
 			<Faq />
+			<BlogSection />
 		</>
 	);
 };

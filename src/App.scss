@@ -1111,7 +1111,7 @@ header {
 	}
 }
 .customer-shape {
-	background: #4e6aff;
+	background: var(--blue);
 	filter: blur(337.5px);
 	border-radius: 35px;
 	width: 434.84px;
@@ -1515,6 +1515,139 @@ header {
 		padding: 12px 32px;
 		span {
 			font-weight: 600;
+		}
+	}
+}
+.blog-section {
+	position: relative;
+	.blog-shape {
+		position: absolute;
+		width: 369px;
+		height: 370px;
+		right: 0;
+		top: 41.27px;
+		background: linear-gradient(90deg, #323fd4 0%, #f55b7a 100%);
+		filter: blur(337.5px);
+		border-radius: 35px;
+		opacity: 0.8;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+.blog-item {
+	display: block;
+	border-radius: 14px;
+	overflow: hidden;
+	img {
+		width: 100%;
+		transition: all ease 0.3s;
+	}
+	position: relative;
+	.content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: calc(100% - 20px);
+		max-width: 412px;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.9702) 0%,
+			rgba(255, 255, 255, 0.99) 100%
+		);
+		backdrop-filter: blur(3px);
+		padding: 28px 36px;
+		.title {
+			font-size: 26px;
+			font-weight: 600;
+			color: var(--blue);
+			margin-bottom: 14px;
+		}
+		color: #303133;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		.date {
+			margin-top: 16px;
+		}
+		@include breakpoint(max-sm) {
+			padding: 25px 20px;
+			.title {
+				font-size: 22px;
+			}
+		}
+	}
+	&:hover {
+		img {
+			transform: scale(1.04);
+		}
+	}
+}
+.home-blog-container {
+	max-width: 437px;
+	margin-left: auto;
+	margin-right: auto;
+	@include breakpoint(lg) {
+		margin-right: 0;
+	}
+}
+.blog-item-2 {
+	display: flex;
+	flex-wrap: wrap;
+	img {
+		width: 135px;
+	}
+	.content {
+		width: 0;
+		flex-grow: 1;
+		padding-left: 24px;
+		font-size: 12px;
+		line-height: 18px;
+		text-transform: capitalize;
+		color: #303133;
+		border-radius: 15px;
+		.title {
+			color: var(--blue);
+			font-weight: 500;
+			margin-bottom: 16px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.text {
+			margin-bottom: 15px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	&:not(:last-child) {
+		@include breakpoint(max-sm) {
+			width: 100%;
+			object-fit: cover;
+			img {
+				width: 130px;
+				height: 100px;
+				object-fit: cover;
+				border-radius: 14px;
+			}
+		}
+		margin-bottom: 42px;
+	}
+	@include breakpoint(max-sm) {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+		.content {
+			.title {
+				font-size: 18px;
+				margin-bottom: 8px;
+			}
 		}
 	}
 }
