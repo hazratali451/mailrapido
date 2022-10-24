@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Login from "./pages/auth/Login";
 import SignUp from "./pages/auth/SignUp";
+import Blog from "./pages/blog/Blog";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import Privacy from "./pages/privacy/Privacy";
@@ -29,6 +30,12 @@ function App() {
 				</Routes>
 				<Routes>
 					<Route path="/privacy" element={<Privacy />} />
+				</Routes>
+				<Routes>
+					<Route path="/blog" element={<Blog />} />
+				</Routes>
+				<Routes>
+					<Route path="/blog/:id" element={<Blog />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
