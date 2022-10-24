@@ -10,7 +10,9 @@ const ContactSection = () => {
 	const [phone, setPhone] = useState("");
 	return (
 		<section className="contact-section pt-120 pb-120">
-			<div className="container">
+			<div className="shape-1"></div>
+			<div className="shape-2"></div>
+			<div className="container position-relative">
 				<div className="row align-items-center gy-5">
 					<div className="col-lg-6">
 						<div className="__contact-wrapper">

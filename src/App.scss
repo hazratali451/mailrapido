@@ -2194,6 +2194,7 @@ textarea.form-control {
 	height: 106px;
 }
 .__contact-wrapper {
+	position: relative;
 	@include breakpoint(lg) {
 		max-width: 515px;
 	}
@@ -2261,4 +2262,28 @@ textarea.form-control {
 .react-tel-input .form-control {
 	width: 100% !important;
 	height: 46px !important;
+}
+.contact-section {
+	position: relative;
+	overflow: hidden;
+	.shape-1 {
+		background: #3d51df;
+		filter: blur(337.5px);
+		border-radius: 35px;
+		top: calc(100% - 60px);
+		position: absolute;
+		left: -200px;
+		width: 434.84px;
+		height: 434.84px;
+	}
+	.shape-2 {
+		width: 369px;
+		height: 370px;
+		right: -100px;
+		top: 396px;
+		background: linear-gradient(90deg, #323fd4 0%, #f55b7a 100%);
+		filter: blur(337.5px);
+		border-radius: 35px;
+		position: absolute;
+	}
 }
