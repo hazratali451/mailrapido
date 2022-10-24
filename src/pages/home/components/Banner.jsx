@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import banner_bg from "../../../assets/images/banner/banner-bg.png";
 import mail_shape from "../../../assets/images/banner/banner-top-shape.svg";
 import mail_icon from "../../../assets/images/banner/mail-icon.svg";
+import BannerTable from "./BannerTable";
+
 const Banner = () => {
 	const ref = useRef();
 	const [copy, setCopy] = useState(false);
@@ -36,7 +38,7 @@ const Banner = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container" style={{ marginTop: `-400px` }}>
+			<div className="container" style={{ marginTop: `-410px` }}>
 				<div className="banner-email-wrapper">
 					<img src={mail_shape} className="mail-shape" alt="" />
 					<div className="banner-email-top">
@@ -78,17 +80,9 @@ const Banner = () => {
 							<span>You have 0 new messages</span>
 						</div>
 					</div>
-					{/* <div className="table-responsive">
-						<table>
-							<thead>
-								<tr>
-									<th>From</th>
-									<th>Subject</th>
-									<th>View</th>
-								</tr>
-							</thead>
-						</table>
-					</div> */}
+					<div className="table--wrapper">
+						<BannerTable />
+					</div>
 				</div>
 			</div>
 		</>
