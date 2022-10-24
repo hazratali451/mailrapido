@@ -1821,6 +1821,7 @@ label {
 	position: relative;
 	padding: 16px 32px;
 	display: inline-block;
+	border: none;
 	&::before,
 	&::after {
 		content: "";
@@ -1858,6 +1859,9 @@ label {
 			font-weight: 600;
 		}
 	}
+}
+.mt-32 {
+	margin-top: 32px;
 }
 .blog-section {
 	position: relative;
@@ -2166,4 +2170,95 @@ label {
 			font-size: 16px;
 		}
 	}
+}
+/*Contact Page*/
+.form-label {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	display: block;
+	text-transform: capitalize;
+	color: #444649;
+	margin-bottom: 5px;
+}
+.form-control {
+	background: #ffffff;
+	border: 1px solid #d0d5dd;
+	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+	border-radius: 8px;
+	height: 46px;
+	outline: none;
+	box-shadow: none !important;
+}
+textarea.form-control {
+	height: 106px;
+}
+.__contact-wrapper {
+	@include breakpoint(lg) {
+		max-width: 515px;
+	}
+	.title {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 62px;
+		text-transform: capitalize;
+		color: #3d51df;
+		margin-bottom: 20px;
+	}
+	.text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 48px;
+	}
+	@include breakpoint(max-sm) {
+		.title {
+			font-size: 30px;
+			line-height: 1.4;
+			margin-bottom: 5px;
+		}
+		.text {
+			margin-bottom: 35px;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.6;
+		}
+	}
+}
+
+.react-tel-input .country-list {
+	bottom: 100%;
+	top: unset;
+}
+.react-tel-input .flag-dropdown {
+	border: none;
+	background: transparent;
+}
+.react-tel-input {
+	// border-bottom: 1px solid #e5e5e5;
+}
+.react-date-picker__wrapper {
+	border: none;
+}
+.react-date-picker {
+	border-bottom: 1px solid #ebebeb;
+}
+.react-date-picker__wrapper * {
+	outline: none;
+}
+.react-tel-input {
+	text-align: left;
+}
+
+.react-tel-input .search {
+	display: flex;
+	align-items: center;
+}
+.react-tel-input .search input {
+	flex-grow: 1;
+	margin-right: 10px;
+}
+.react-tel-input .form-control {
+	width: 100% !important;
+	height: 46px !important;
 }
