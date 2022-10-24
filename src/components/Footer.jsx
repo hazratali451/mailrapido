@@ -120,13 +120,13 @@ const Footer = () => {
 							<h4 className="subtitle">Quick Links</h4>
 							<ul className="__quick-links">
 								<li>
-									<Link to="#">Privacy</Link>
+									<Link to="/privacy">Privacy</Link>
 								</li>
 								<li>
 									<Link to="#">Terms & Service</Link>
 								</li>
 								<li>
-									<Link to="#">Blog</Link>
+									<Link to="/blog">Blog</Link>
 								</li>
 								<li>
 									<Link to="#">Pricing</Link>

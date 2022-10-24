@@ -2354,3 +2354,44 @@ textarea.form-control {
 		max-width: 100%;
 	}
 }
+.privacy-section {
+	.item {
+		ol {
+			margin: 0;
+			padding: 0;
+			padding-left: 20px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #303133;
+			li:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 44px;
+		}
+		.title {
+			padding-bottom: 15px;
+			&::after {
+				display: block;
+				height: 4px;
+				width: 107px;
+				content: "";
+				background: var(--primary);
+				margin-top: 15px;
+			}
+		}
+		@include breakpoint(lg) {
+			&:not(:last-child) {
+				margin-bottom: 64px;
+			}
+			.title {
+				font-weight: 600;
+				font-size: 32px;
+				line-height: 40px;
+				padding-bottom: 24px;
+			}
+		}
+	}
+}

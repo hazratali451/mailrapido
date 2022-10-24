@@ -9,6 +9,7 @@ import Login from "./pages/auth/Login";
 import SignUp from "./pages/auth/SignUp";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
+import Privacy from "./pages/privacy/Privacy";
 function App() {
 	return (
 		<>
@@ -25,6 +26,9 @@ function App() {
 				</Routes>
 				<Routes>
 					<Route path="/sign-up" element={<SignUp />} />
+				</Routes>
+				<Routes>
+					<Route path="/privacy" element={<Privacy />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
