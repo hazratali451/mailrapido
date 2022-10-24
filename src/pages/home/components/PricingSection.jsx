@@ -54,6 +54,7 @@ const PricingSection = () => {
 							</div>
 						</div>
 						<div className="__pricing-item">
+							<span className="__pricing-tag">Most Popular</span>
 							<div className="__pricing-item-top">
 								<h6 className="name">Premium</h6>
 								<div className="price">

@@ -63,7 +63,9 @@ const BlogSection = () => {
 							{data &&
 								data.map(({ img, title, text, date }, i) => (
 									<Link className="blog-item-2" to="#" key={i}>
-										<img src={img} alt="" />
+										<div className="img">
+											<img src={img} alt="" />
+										</div>
 										<div className="content">
 											<h5 className="title">{title}</h5>
 											<div className="text">{text}</div>
