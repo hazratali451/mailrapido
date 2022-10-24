@@ -67,7 +67,7 @@ const Faq = () => {
 						Can’t find the answer you’re looking for? Please chat to our
 						friendly team.
 					</div>
-					<Link to="#" className="btn--base">
+					<Link to="/contact" className="btn--base">
 						<span>Get in touch</span>
 					</Link>
 				</div>

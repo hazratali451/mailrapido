@@ -5,6 +5,7 @@ import "swiper/css";
 import "./App.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 function App() {
 	return (
@@ -13,6 +14,9 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
+				</Routes>
+				<Routes>
+					<Route path="/contact" element={<Contact />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

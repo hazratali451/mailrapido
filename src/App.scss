@@ -710,7 +710,8 @@ header {
 		background: linear-gradient(104.77deg, #323fd4 3.99%, #f06e88 101.59%);
 		inset: 0;
 		position: absolute;
-		opacity: 0.7;
+		// opacity: 0.7;
+		mix-blend-mode: screen;
 	}
 	position: relative;
 	.container {
@@ -1679,7 +1680,7 @@ header {
 /*Footer*/
 .footer-top {
 	padding: 95px 0 90px;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff36;
 	@media (max-width: 575px) {
 		padding: 85px 15px 70px;
 	}
@@ -1787,5 +1788,58 @@ header {
 	color: rgba(255, 255, 255, 0.97);
 	@include breakpoint(md) {
 		padding: 65px 0;
+	}
+}
+/*Page Header*/
+.page-header {
+	padding: 65px 0;
+	&::before {
+		content: "";
+		background: linear-gradient(104.77deg, #323fd4 3.99%, #f06e88 101.59%);
+		mix-blend-mode: screen;
+		inset: 0;
+		position: absolute;
+		// opacity: 0.78;
+	}
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.page-header-content {
+	max-width: 639px;
+	margin: 0 auto;
+	text-align: center;
+	.title {
+		margin-bottom: 12px;
+		color: #ffffff;
+		font-size: 48px;
+		line-height: 58px;
+		font-weight: 800;
+	}
+	.text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 151.02%;
+		color: #ffffff;
+	}
+	@include breakpoint(max-lg) {
+		.title {
+			font-size: 42px;
+		}
+		.text {
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+	@include breakpoint(max-sm) {
+		.title {
+			font-size: 32px;
+		}
+		.text {
+			font-size: 16px;
+		}
 	}
 }
