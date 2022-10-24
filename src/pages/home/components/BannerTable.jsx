@@ -48,7 +48,7 @@ const BannerTable = () => {
 						</tr>
 						{/* Other Data */}
 						{[{}, {}].map((item, i) => (
-							<TableRow />
+							<TableRow key={i} />
 						))}
 					</tbody>
 				</table>
