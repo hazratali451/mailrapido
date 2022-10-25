@@ -11,7 +11,7 @@ const BlogCard = ({
 	link,
 }) => {
 	return (
-		<div className="__post-item">
+		<div className="__post-item" data-aos="fade-up">
 			<Link className="post-link" to={link}></Link>
 			<div className="__post-item-img">
 				<img src={img} alt="" />

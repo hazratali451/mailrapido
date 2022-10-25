@@ -81,7 +81,10 @@ const ReadedArticles = () => {
 							{data &&
 								data.map(({ link, img, title, text, date }, i) => (
 									<div className="col-md-6" key={i}>
-										<div className="__article-item">
+										<div
+											className="__article-item"
+											data-aos="fade-up"
+										>
 											<Link to={link} className="link"></Link>
 											<img
 												src={img}
