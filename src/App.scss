@@ -2719,3 +2719,39 @@ textarea.form-control {
 		border-radius: 25px;
 	}
 }
+.__blog-details {
+	.title {
+		color: var(--blue);
+		margin-bottom: 24px;
+		font-weight: 600;
+	}
+	hr {
+		margin-top: 26px;
+		margin-bottom: 26px;
+	}
+	.__fit-img {
+		width: 100%;
+	}
+	.text,
+	.quote,
+	.__fit-img {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	@include breakpoint(xl) {
+		padding-left: 10px;
+		padding-right: 10px;
+		hr {
+			margin-top: 56px;
+			margin-bottom: 56px;
+		}
+		.text,
+		.quote,
+		.__fit-img {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
