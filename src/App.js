@@ -23,6 +23,7 @@ function App() {
 			offset: 0,
 		});
 	}, []);
+
 	return (
 		<>
 			<BrowserRouter>

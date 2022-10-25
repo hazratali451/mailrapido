@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Particles from "./Particles";
 
-import page_header from "../assets/images/banner/banner-bg.png";
 const PageHeader = ({ subtitle, title, text, className }) => {
+	useEffect(() => {
+		const script = document.createElement("script");
+		script.src = "particles.min.js";
+		script.async = true;
+		document.body.appendChild(script);
+		return () => {
+			document.body.removeChild(script);
+		};
+	}, []);
+
 	return (
-		<section
-			className={`page-header ${className}`}
-			style={{
-				background: `url(${page_header}) no-repeat center center / cover`,
-			}}
-		>
+		<section className={`page-header ${className}`}>
+			<Particles />
 			<div className={`${subtitle ? "container-fluid" : "container"}`}>
 				<div className="page-header-content">
 					{title && <h2 className="title">{title}</h2>}

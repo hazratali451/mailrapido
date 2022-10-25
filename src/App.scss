@@ -746,7 +746,7 @@ header {
 		inset: 0;
 		position: absolute;
 		// opacity: 0.7;
-		mix-blend-mode: screen;
+		// mix-blend-mode: screen;
 	}
 	position: relative;
 	.container {
@@ -2191,7 +2191,7 @@ label {
 	&::before {
 		content: "";
 		background: linear-gradient(104.77deg, #323fd4 3.99%, #f06e88 101.59%);
-		mix-blend-mode: screen;
+		// mix-blend-mode: screen;
 		inset: 0;
 		position: absolute;
 		// opacity: 0.78;
@@ -2852,4 +2852,9 @@ textarea.form-control {
 	transition-delay: 0.1s !important;
 	-webkit-transition-delay: 0.1s !important;
 	-moz-transition-delay: 0.1s !important;
+}
+.particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
