@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Login from "./pages/auth/Login";
 import SignUp from "./pages/auth/SignUp";
 import Blog from "./pages/blog/Blog";
+import BlogSingle from "./pages/blog/BlogSingle";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import Privacy from "./pages/privacy/Privacy";
@@ -35,7 +36,7 @@ function App() {
 					<Route path="/blog" element={<Blog />} />
 				</Routes>
 				<Routes>
-					<Route path="/blog/:id" element={<Blog />} />
+					<Route path="/blog/:id" element={<BlogSingle />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

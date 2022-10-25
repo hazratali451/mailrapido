@@ -12,6 +12,7 @@ import img9 from "../../../assets/images/blog/blog/9.png";
 
 import { Link } from "react-router-dom";
 import author1 from "../../../assets/images/avatar2.png";
+import BlogCard from "../../../components/BlogCard";
 
 const data = [
 	{
@@ -21,7 +22,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img2,
@@ -30,7 +31,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img3,
@@ -39,7 +40,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img4,
@@ -48,7 +49,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img5,
@@ -57,7 +58,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img6,
@@ -66,7 +67,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img7,
@@ -75,7 +76,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img8,
@@ -84,7 +85,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 	{
 		img: img9,
@@ -93,7 +94,7 @@ const data = [
 		authorName: `Hawkins`,
 		authorImage: author1,
 		date: `April 24, 2022 - 5 m read`,
-		link: `#`,
+		link: `/blog/blog-single`,
 	},
 ];
 const BlogSection = () => {
@@ -102,44 +103,13 @@ const BlogSection = () => {
 			<div className="shape-1"></div>
 			<div className="shape-2"></div>
 			<div className="container">
-				<div className="row g-3 g-sm-4 gy-xl-5">
+				<div className="row g-3 g-sm-4 gy-xl-5 justify-content-center">
 					{data &&
-						data.map(
-							(
-								{
-									img,
-									title,
-									text,
-									authorName,
-									authorImage,
-									date,
-									link,
-								},
-								i
-							) => (
-								<div className="col-lg-4 col-md-6">
-									<div className="__post-item">
-										<Link className="post-link" to={link}></Link>
-										<div className="__post-item-img">
-											<img src={img} alt="" />
-										</div>
-										<div className="__post-item-cont">
-											<div className="__post-item-cont-top">
-												<h5 className="title">{title}</h5>
-												<p>{text}</p>
-											</div>
-											<div className="__post-item-cont-bottom">
-												<div className="author d-flex align-items-center">
-													<img src={authorImage} alt="" />
-													<h6>{authorName}</h6>
-												</div>
-												<span>{date}</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							)
-						)}
+						data.map((item, i) => (
+							<div className="col-lg-4 col-sm-6" key={i}>
+								<BlogCard {...item} />
+							</div>
+						))}
 				</div>
 				<div className="mt-4 pt-2 text-center">
 					<Link to="#" className="btn--base">

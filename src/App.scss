@@ -2269,7 +2269,6 @@ textarea.form-control {
 	width: 100% !important;
 	height: 46px !important;
 }
-.blog-section,
 .auth-section,
 .contact-section {
 	position: relative;
@@ -2441,6 +2440,8 @@ textarea.form-control {
 			font-size: 12px;
 			display: flex;
 			justify-content: space-between;
+			gap: 4px;
+			flex-wrap: wrap;
 			.author {
 				display: flex;
 				align-items: center;
@@ -2463,5 +2464,234 @@ textarea.form-control {
 				transform: scale(1.1);
 			}
 		}
+	}
+	@include breakpoint(max-sm) {
+		max-width: 340px;
+		margin: 0 auto;
+	}
+}
+.blog-section {
+	position: relative;
+	.shape-1 {
+		background: #3d51df;
+		filter: blur(337.5px);
+		border-radius: 35px;
+		bottom: 100px;
+		position: absolute;
+		left: -200px;
+		width: 434.84px;
+		height: 434.84px;
+	}
+	.shape-2 {
+		width: 369px;
+		height: 370px;
+		right: 0;
+		top: 396px;
+		background: linear-gradient(90deg, #323fd4 0%, #f55b7a 100%);
+		filter: blur(337.5px);
+		border-radius: 35px;
+		position: absolute;
+	}
+	@include breakpoint(max-sm) {
+		.shape-1,
+		.shape-2 {
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+.article-title {
+	font-weight: 600;
+}
+.__article-item {
+	position: relative;
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(50, 63, 212, 0.2),
+		0px 0px 16px rgba(50, 63, 212, 0.25);
+	border-radius: 16px;
+	@include breakpoint(xl) {
+		margin: 8px;
+	}
+	.link {
+		position: absolute;
+		inset: 0;
+		z-index: 3;
+	}
+	padding: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	&-img {
+		width: 184px;
+		border-radius: 8px;
+		object-fit: cover;
+		transition: all ease 0.4s;
+	}
+	&-content {
+		padding-left: 24px;
+		font-size: 12px;
+		line-height: 18px;
+		color: #303133;
+		width: 0;
+		flex-grow: 1;
+		.title {
+			color: var(--blue);
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin-bottom: 16px;
+		}
+		.text {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin-bottom: 15px;
+		}
+		.date {
+			font-weight: 300;
+			font-size: 10px;
+			line-height: 10px;
+			text-transform: capitalize;
+			color: #303133;
+		}
+	}
+	&:hover {
+		img {
+			transform: scale(1.02);
+		}
+	}
+	@include breakpoint(md) {
+		@include breakpoint(max-lg) {
+			&-img {
+				width: 120px;
+			}
+			&-content {
+				padding-left: 16px;
+			}
+		}
+	}
+	@include breakpoint(max-sm) {
+		&-img {
+			width: 130px;
+		}
+		&-content {
+			padding-left: 16px;
+		}
+	}
+	@media (max-width: 400px) {
+		&-img {
+			width: 100px;
+		}
+		&-content {
+			padding-left: 16px;
+		}
+	}
+}
+.m--8 {
+	@include breakpoint(xl) {
+		margin: -8px;
+	}
+}
+.__newsletter-wrapper {
+	gap: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.content {
+		max-width: 574px;
+		.title {
+			margin-bottom: 22px;
+			font-weight: 600;
+		}
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 23px;
+		color: #303133;
+		@include breakpoint(md) {
+			.title {
+				font-size: 48px;
+				max-width: 549px;
+			}
+		}
+		@include breakpoint(max-xl) {
+			max-width: 450px;
+			.title {
+				font-size: 42px;
+			}
+			font-size: 18px;
+		}
+		@include breakpoint(max-lg) {
+			max-width: 100%;
+			width: 100%;
+			.title {
+				font-size: 42px;
+			}
+			font-size: 18px;
+		}
+		@include breakpoint(max-md) {
+			.title {
+				font-size: calc(2.2rem + 0.1vw);
+			}
+		}
+	}
+}
+
+.newsletter-section {
+	padding: 85px 0 100px;
+	.container {
+		@include breakpoint(xl) {
+			max-width: 1208px;
+		}
+	}
+	@include breakpoint(max-md) {
+		padding: 70px 0;
+	}
+}
+.__newsletter-form {
+	position: relative;
+	width: 0;
+	flex-grow: 1;
+	max-width: 522px;
+	align-self: center;
+	input {
+		height: 70px;
+		background: linear-gradient(90deg, #323fd4 0%, #f55b7a 100%);
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		box-shadow: none;
+		padding-left: 42px;
+		padding-right: 190px;
+		width: 100%;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 23px;
+		color: var(--white);
+		&::placeholder {
+			color: var(--white);
+		}
+	}
+	button {
+		background: var(--white);
+		outline: none !important;
+		box-shadow: none !important;
+		border: none !important;
+		border-radius: 0;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		color: #323fd4;
+		position: absolute;
+		right: 17px;
+		top: 12px;
+		height: calc(100% - 24px);
+		padding: 0 35px;
+		border-radius: 25px;
 	}
 }
