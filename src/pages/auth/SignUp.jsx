@@ -21,7 +21,7 @@ const SignUp = () => {
 				<div className="container position-relative">
 					<div className="row align-items-center gy-5">
 						<div className="col-lg-6">
-							<div className="__login-wrapper">
+							<div className="__login-wrapper" data-aos="fade-up">
 								<h2 className="title">Create a new account</h2>
 								<form onSubmit={handleSubmit}>
 									<div className="row g-4">
@@ -126,7 +126,12 @@ const SignUp = () => {
 							</div>
 						</div>
 						<div className="col-lg-6 text-center text-lg-end">
-							<img className="auth-img" src={img} alt="" />
+							<img
+								className="auth-img"
+								data-aos="fade-right"
+								src={img}
+								alt=""
+							/>
 						</div>
 					</div>
 				</div>

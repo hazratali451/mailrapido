@@ -21,7 +21,7 @@ const PricingSection = () => {
 						title="The right price for you, whoever you are"
 						text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum. "
 					/>
-					<div className="__pricing">
+					<div className="__pricing" data-aos="fade-up">
 						<div className="__pricing-item">
 							<div className="__pricing-item-top">
 								<h6 className="name">Public</h6>

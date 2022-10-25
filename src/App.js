@@ -1,5 +1,8 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "swiper/css";
 import "./App.scss";
@@ -13,6 +16,13 @@ import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import Privacy from "./pages/privacy/Privacy";
 function App() {
+	useEffect(() => {
+		AOS.init({
+			easing: "ease-in-cubic",
+			once: true,
+			offset: 0,
+		});
+	}, []);
 	return (
 		<>
 			<BrowserRouter>

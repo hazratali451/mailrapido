@@ -10,7 +10,7 @@ const GetApp = () => {
 		<div className="get-app">
 			<div className="container">
 				<div className="get-app-wrapper">
-					<div className="content">
+					<div className="content" data-aos="fade-left">
 						<h2 className="title">Download our mobile app</h2>
 						<div className="text">
 							Disposable temporary email protects your real email address
@@ -25,7 +25,12 @@ const GetApp = () => {
 							</Link>
 						</div>
 					</div>
-					<img src={mobile} className="mobile-app" alt="" />
+					<img
+						src={mobile}
+						className="mobile-app"
+						data-aos="fade-up"
+						alt=""
+					/>
 				</div>
 			</div>
 		</div>

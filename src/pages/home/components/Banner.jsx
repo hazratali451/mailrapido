@@ -29,7 +29,7 @@ const Banner = () => {
 				}}
 			>
 				<div className="container">
-					<div className="banner-content">
+					<div className="banner-content" data-aos="fade-up">
 						<h2 className="title"> temporary email address is ready</h2>
 						<p className="text">
 							This mail can be changed to another. Also available search
@@ -39,7 +39,7 @@ const Banner = () => {
 				</div>
 			</div>
 			<div className="container banner-container">
-				<div className="banner-email-wrapper">
+				<div className="banner-email-wrapper" data-aos="fade-up">
 					<img src={mail_shape} className="mail-shape" alt="" />
 					<div className="banner-email-top">
 						<h4 className="subtitle">Your Temporary Email Address</h4>

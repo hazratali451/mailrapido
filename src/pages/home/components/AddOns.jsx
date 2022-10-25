@@ -32,7 +32,7 @@ const data = [
 const AddOns = () => {
 	return (
 		<>
-			<section className="pb-120 overflow-hidden">
+			<section className="pb-120 overflow-hidden" data-aos="fade-up">
 				<div className="container">
 					<div className="row align-items-center gy-4">
 						<div className="col-lg-5 text-center text-lg-start">

@@ -44,7 +44,7 @@ const BlogSection = () => {
 				<SectionHeader title="Our Latest Article" subtitle="Blog" />
 				<div className="row gy-5 align-items-center justify-content-center">
 					<div className="col-lg-6 col-md-8">
-						<Link to="#" className="blog-item">
+						<Link to="#" className="blog-item" data-aos="fade-left">
 							<img src={blog} alt="" />
 							<div className="content">
 								<h3 className="title">
@@ -59,7 +59,7 @@ const BlogSection = () => {
 						</Link>
 					</div>
 					<div className="col-lg-6">
-						<div className="home-blog-container">
+						<div className="home-blog-container" data-aos="fade-right">
 							{data &&
 								data.map(({ img, title, text, date }, i) => (
 									<Link className="blog-item-2" to="#" key={i}>

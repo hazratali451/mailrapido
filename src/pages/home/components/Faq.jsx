@@ -41,7 +41,7 @@ const Faq = () => {
 					title="FAQ Questions & Answers"
 					className="mb-4 mb-md-5"
 				/>
-				<div className="__faq">
+				<div className="__faq" data-aos="fade-up">
 					<Accordion defaultActiveKey={0}>
 						{data &&
 							data.map(({ title, text }, i) => (
@@ -60,7 +60,7 @@ const Faq = () => {
 							))}
 					</Accordion>
 				</div>
-				<div className="__still-faq text-center">
+				<div className="__still-faq text-center" data-aos="fade-up">
 					<img src={avatar} alt="" />
 					<h5>Still have questions?</h5>
 					<div>

@@ -41,7 +41,10 @@ const FeatureItem = ({ img, title, txt }) => {
 
 const Feature = () => {
 	return (
-		<section className="feature-section pb-120 position-relative">
+		<section
+			className="feature-section pb-120 position-relative"
+			data-aos="fade-up"
+		>
 			<div className="feature-shape"></div>
 			<div className="container">
 				<SectionHeader

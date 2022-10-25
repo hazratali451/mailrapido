@@ -4,7 +4,7 @@ import SectionHeader from "../../../components/SectionHeader";
 const WorkProcess = () => {
 	return (
 		<>
-			<section className="process-section pt-120 pb-120">
+			<section className="process-section pt-120 pb-120" data-aos="fade-up">
 				<div className="process-shape"></div>
 				<div className="container">
 					<SectionHeader

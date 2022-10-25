@@ -37,7 +37,10 @@ const CustomerSay = () => {
 			<section className="customer-section">
 				<div className="customer-shape"></div>
 				<div className="container position-relative">
-					<SectionHeader title="What Our Customer Says" />
+					<SectionHeader
+						title="What Our Customer Says"
+						data-aos="fade-up"
+					/>
 					<div className="customer-slider">
 						<Swiper
 							spaceBetween={16}

@@ -15,7 +15,7 @@ const ContactSection = () => {
 			<div className="container position-relative">
 				<div className="row align-items-center gy-5">
 					<div className="col-lg-6">
-						<div className="__contact-wrapper">
+						<div className="__contact-wrapper" data-aos="fade-up">
 							<h2 className="title">Get in touch</h2>
 							<div className="text">
 								Our friendly team would love to hear from you.
@@ -72,7 +72,12 @@ const ContactSection = () => {
 						</div>
 					</div>
 					<div className="col-lg-6 text-center text-lg-end">
-						<img className="mw-100" src={img} alt="" />
+						<img
+							className="mw-100"
+							data-aos="fade-right"
+							src={img}
+							alt=""
+						/>
 					</div>
 				</div>
 			</div>
