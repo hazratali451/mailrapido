@@ -2269,6 +2269,7 @@ textarea.form-control {
 	width: 100% !important;
 	height: 46px !important;
 }
+.blog-section,
 .auth-section,
 .contact-section {
 	position: relative;
@@ -2391,6 +2392,75 @@ textarea.form-control {
 				font-size: 32px;
 				line-height: 40px;
 				padding-bottom: 24px;
+			}
+		}
+	}
+}
+/*Blogs*/
+.__post-item {
+	background: #fffffe;
+	box-shadow: 0px 8px 20px rgba(74, 78, 220, 0.15);
+	border-radius: 16px;
+	position: relative;
+	.post-link {
+		position: absolute;
+		inset: 0;
+		display: block;
+		z-index: 1;
+	}
+	overflow: hidden;
+	&-img {
+		margin: 11px;
+		border-radius: 16px;
+		overflow: hidden;
+		margin-bottom: 24px;
+		img {
+			width: 100%;
+			transition: all ease 0.3s;
+		}
+	}
+	&-cont {
+		.title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			color: #0f101a;
+			margin-bottom: 12px;
+		}
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		padding: 0 19px 20px;
+		&-top {
+			max-width: 245px;
+		}
+		&-bottom {
+			padding-top: 16px;
+			margin-top: 16px;
+			border-top: 1px solid var(--border);
+			font-size: 12px;
+			display: flex;
+			justify-content: space-between;
+			.author {
+				display: flex;
+				align-items: center;
+				* {
+					margin: 0;
+				}
+				img {
+					width: 24px;
+					height: 24px;
+					object-fit: cover;
+					border-radius: 50%;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	&:hover {
+		.__post-item-img {
+			img {
+				transform: scale(1.1);
 			}
 		}
 	}
