@@ -72,12 +72,7 @@ const ContactSection = () => {
 						</div>
 					</div>
 					<div className="col-lg-6 text-center text-lg-end">
-						<img
-							className="mw-100"
-							data-aos="fade-right"
-							src={img}
-							alt=""
-						/>
+						<img className="mw-100" data-aos="fade-up" src={img} alt="" />
 					</div>
 				</div>
 			</div>

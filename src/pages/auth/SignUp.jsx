@@ -128,7 +128,7 @@ const SignUp = () => {
 						<div className="col-lg-6 text-center text-lg-end">
 							<img
 								className="auth-img"
-								data-aos="fade-right"
+								data-aos="fade-up"
 								src={img}
 								alt=""
 							/>
