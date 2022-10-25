@@ -9,7 +9,7 @@ const PageHeader = ({ subtitle, title, text, className }) => {
 				background: `url(${page_header}) no-repeat center center / cover`,
 			}}
 		>
-			<div className="container">
+			<div className={`${subtitle ? "container-fluid" : "container"}`}>
 				<div className="page-header-content">
 					{title && <h2 className="title">{title}</h2>}
 					{subtitle && <h4 className="subtitle">{subtitle}</h4>}

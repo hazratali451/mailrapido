@@ -8,8 +8,11 @@ const BlogSingle = () => {
 		<>
 			<PageHeader subtitle="your software & really enjoy the account fermentum scelerisque lacinia malesuada nunc.Habitant ullamcor setup " />
 
-			<ReadedArticles />
+			<section className="blog-single-section pt-120 pb-120">
+				<div className="container"></div>
+			</section>
 
+			<ReadedArticles />
 			<AlsoLike />
 		</>
 	);
