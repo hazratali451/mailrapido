@@ -38,7 +38,7 @@ const Banner = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container" style={{ marginTop: `-410px` }}>
+			<div className="container banner-container">
 				<div className="banner-email-wrapper">
 					<img src={mail_shape} className="mail-shape" alt="" />
 					<div className="banner-email-top">

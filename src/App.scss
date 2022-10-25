@@ -787,7 +787,7 @@ header {
 		font-weight: 400;
 	}
 	@include breakpoint(max-sm) {
-		padding: 70px 0;
+		padding: 70px 0 0;
 		.title {
 			font-size: 28px;
 		}
@@ -2820,5 +2820,28 @@ textarea.form-control {
 				margin-bottom: 40px;
 			}
 		}
+	}
+}
+.banner-container {
+	margin-top: -410px;
+	@include breakpoint(max-md) {
+		margin-top: -369px;
+	}
+	@include breakpoint(max-sm) {
+		margin-top: -335px;
+	}
+	@media (max-width: 430px) {
+		margin-top: -386px;
+	}
+	@media (max-width: 330px) {
+		margin-top: -418px;
+	}
+}
+.banner-section {
+	@media (max-width: 430px) {
+		padding-bottom: 430px;
+	}
+	@media (max-width: 330px) {
+		padding-bottom: 470px;
 	}
 }
