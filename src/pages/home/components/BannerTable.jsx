@@ -13,6 +13,7 @@ import trash from "../../../assets/images/banner/trash.svg";
 
 const BannerTable = () => {
 	const [index, setIndex] = useState(false);
+
 	return (
 		<>
 			<div className="table-responsive">
@@ -67,6 +68,15 @@ const BannerTable = () => {
 const TableRow = ({ serial, index, setIndex }) => {
 	const [starred, setStarred] = useState(false);
 
+	const handleClick = () => {
+		if (serial === index) {
+			setIndex(false);
+			return;
+		} else {
+			setIndex(serial);
+		}
+	};
+
 	return (
 		<>
 			<tr
@@ -75,10 +85,7 @@ const TableRow = ({ serial, index, setIndex }) => {
 				}`}
 			>
 				<td>
-					<span
-						className="click-btn"
-						onClick={() => setIndex(serial)}
-					></span>
+					<span className="click-btn" onClick={handleClick}></span>
 					<div className="checked__all-wrapper">
 						<label className="check-input">
 							<input type="checkbox" name="check__mail" />

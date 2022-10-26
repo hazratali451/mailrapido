@@ -1069,7 +1069,9 @@ header {
 	// background: #fff;
 	font-size: 16px;
 	font-weight: 600;
-	svg {
+	display: flex;
+	align-items: center;
+	img {
 		margin-right: 5px;
 	}
 	@include breakpoint(max-md) {

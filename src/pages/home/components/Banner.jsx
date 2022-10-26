@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
-import { FiRefreshCw, FiTrash2 } from "react-icons/fi";
 import { MdContentCopy } from "react-icons/md";
-import { TfiPencil } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import mail_shape from "../../../assets/images/banner/banner-top-shape.svg";
 import mail_icon from "../../../assets/images/banner/mail-icon.svg";
 import Particles from "../../../components/Particles";
 import BannerTable from "./BannerTable";
-
+import pen from "./pen.svg";
+import refresh_img from "./refresh.svg";
+import trash from "./trash.svg";
 const Banner = () => {
 	const ref = useRef();
 	const [copy, setCopy] = useState(false);
@@ -62,13 +62,13 @@ const Banner = () => {
 							</div>
 							<div className="banner-btn-wrapper">
 								<Link className="outline-btn" to="#">
-									<FiTrash2 /> Delete
+									<img src={trash} alt="" /> Delete
 								</Link>
 								<Link className="outline-btn" to="#">
-									<FiRefreshCw /> FiRefreshCw
+									<img src={refresh_img} alt="" /> Refresh
 								</Link>
 								<Link className="outline-btn" to="#">
-									<TfiPencil /> FiRefreshCw
+									<img src={pen} alt="" /> Create
 								</Link>
 							</div>
 							<div className="count-message d-flex align-items-center justify-content-center">
