@@ -2,8 +2,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "swiper/css";
 import "./App.scss";
 import Footer from "./components/Footer";
@@ -23,33 +23,42 @@ function App() {
 			offset: 0,
 		});
 	}, []);
+	const Wrapper = ({ children }) => {
+		const location = useLocation();
+		useLayoutEffect(() => {
+			document.documentElement.scrollTo(0, 0);
+		}, [location.pathname]);
+		return children;
+	};
 
 	return (
 		<>
 			<BrowserRouter>
-				<Header />
-				<Routes>
-					<Route path="/" element={<Home />} />
-				</Routes>
-				<Routes>
-					<Route path="/contact" element={<Contact />} />
-				</Routes>
-				<Routes>
-					<Route path="/login" element={<Login />} />
-				</Routes>
-				<Routes>
-					<Route path="/sign-up" element={<SignUp />} />
-				</Routes>
-				<Routes>
-					<Route path="/privacy" element={<Privacy />} />
-				</Routes>
-				<Routes>
-					<Route path="/blog" element={<Blog />} />
-				</Routes>
-				<Routes>
-					<Route path="/blog/:id" element={<BlogSingle />} />
-				</Routes>
-				<Footer />
+				<Wrapper>
+					<Header />
+					<Routes>
+						<Route path="/" element={<Home />} />
+					</Routes>
+					<Routes>
+						<Route path="/contact" element={<Contact />} />
+					</Routes>
+					<Routes>
+						<Route path="/login" element={<Login />} />
+					</Routes>
+					<Routes>
+						<Route path="/sign-up" element={<SignUp />} />
+					</Routes>
+					<Routes>
+						<Route path="/privacy" element={<Privacy />} />
+					</Routes>
+					<Routes>
+						<Route path="/blog" element={<Blog />} />
+					</Routes>
+					<Routes>
+						<Route path="/blog/:id" element={<BlogSingle />} />
+					</Routes>
+					<Footer />
+				</Wrapper>
 			</BrowserRouter>
 		</>
 	);

@@ -4,6 +4,7 @@ import avatar from "../../../assets/images/avatar.png";
 import check from "../../../assets/images/banner/check.svg";
 import dots from "../../../assets/images/banner/dots.svg";
 import download from "../../../assets/images/banner/download.svg";
+import false_star from "../../../assets/images/banner/false-star.svg";
 import file from "../../../assets/images/banner/file.svg";
 import refresh from "../../../assets/images/banner/refresh.svg";
 import search from "../../../assets/images/banner/search.svg";
@@ -11,6 +12,7 @@ import star from "../../../assets/images/banner/star.svg";
 import trash from "../../../assets/images/banner/trash.svg";
 
 const BannerTable = () => {
+	const [index, setIndex] = useState(false);
 	return (
 		<>
 			<div className="table-responsive">
@@ -48,7 +50,12 @@ const BannerTable = () => {
 						</tr>
 						{/* Other Data */}
 						{[{}, {}].map((item, i) => (
-							<TableRow key={i} />
+							<TableRow
+								key={i}
+								serial={i}
+								setIndex={setIndex}
+								index={index}
+							/>
 						))}
 					</tbody>
 				</table>
@@ -57,20 +64,20 @@ const BannerTable = () => {
 	);
 };
 //Table Row
-const TableRow = () => {
-	const [index, setIndex] = useState(false);
+const TableRow = ({ serial, index, setIndex }) => {
+	const [starred, setStarred] = useState(false);
 
 	return (
 		<>
 			<tr
 				className={`position-relative ${
-					index ? "open-table-row border-bottom-0" : ""
+					index === serial ? "open-table-row border-bottom-0" : ""
 				}`}
 			>
 				<td>
 					<span
 						className="click-btn"
-						onClick={() => setIndex(!index)}
+						onClick={() => setIndex(serial)}
 					></span>
 					<div className="checked__all-wrapper">
 						<label className="check-input">
@@ -79,8 +86,15 @@ const TableRow = () => {
 								<img src={check} alt="" />
 							</span>
 						</label>
-						<div className="refresh cursor-pointer">
-							<img src={star} alt="" />
+						<div
+							className="refresh cursor-pointer"
+							onClick={() => setStarred(!starred)}
+						>
+							{starred ? (
+								<img src={star} alt="" />
+							) : (
+								<img src={false_star} alt="" />
+							)}
 						</div>
 						<div className="user">
 							<img src={avatar} alt="" />
@@ -118,7 +132,11 @@ const TableRow = () => {
 			</tr>
 			<tr className={`hidden-table-data`}>
 				<td colSpan={12}>
-					<div className={`table-hidden-content ${index ? "active" : ""}`}>
+					<div
+						className={`table-hidden-content ${
+							index === serial ? "active" : ""
+						}`}
+					>
 						<div className="content">
 							<div className="wish-content">
 								<div className="dear">Subject</div>
