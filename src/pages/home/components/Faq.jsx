@@ -4,7 +4,9 @@ import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import SectionHeader from "../../../components/SectionHeader";
 
 import { Link } from "react-router-dom";
-import avatar from "../../../assets/images/faq-avatar.png";
+import avatar1 from "../../../assets/images/avatar/avatar1.png";
+import avatar2 from "../../../assets/images/avatar/avatar2.png";
+import avatar3 from "../../../assets/images/avatar/avatar3.png";
 const data = [
 	{
 		title: `How are we sourcing talents? -`,
@@ -61,7 +63,11 @@ const Faq = () => {
 					</Accordion>
 				</div>
 				<div className="__still-faq text-center" data-aos="fade-up">
-					<img src={avatar} alt="" />
+					<div className="__still-faq-img">
+						<img src={avatar2} alt="" />
+						<img src={avatar1} alt="" />
+						<img src={avatar3} alt="" />
+					</div>
 					<h5>Still have questions?</h5>
 					<div>
 						Can’t find the answer you’re looking for? Please chat to our
